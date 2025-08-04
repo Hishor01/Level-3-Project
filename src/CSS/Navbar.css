@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #006;
+    color: white;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+.auth-buttons {
+    font-size: 16px;
+    font-weight: bold;
+    gap: 20px;
+    display: flex;
+}
+.button1 {
+    background-color: #fff;
+    color: #006;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bolder;
+}
+.button1:hover {
+    background-color: #006;
+    color: #fff;
+    transition: 0.3s;
+    border: #fff 1px solid;
+}
+
+.button1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.button1:hover::after {
+    transform: scaleX(1);
+}
+.button2 {
+    background-color: #006;
+    color: #fff;
+    border: #fff 1px solid;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    font-weight: bolder;
+}
+.button2:hover {
+    background-color: #fff;
+    color: #006;
+    transition: 0.3s;
+}
+
+.button2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #006;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+.button2:hover::after {
+    transform: scaleX(1);
+}
